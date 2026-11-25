@@ -1,56 +1,60 @@
 # WhitelistLab
 
-WhitelistLab is a privacy-friendly network diagnostics tool designed for iPhone/iPad and desktop browsers.
+WhitelistLab — инструмент для диагностики сетевого доступа, созданный прежде всего для iPhone/iPad и обычных браузеров на компьютере.
 
-It helps determine whether a URL is reachable and where a failure is likely happening: local connectivity, browser access, HTTP response, redirect, timeout, or an application/server problem.
+Он помогает понять, доступен ли указанный адрес и на каком уровне может возникать проблема: подключение к интернету, браузер, HTTP-ответ, перенаправление, тайм-аут или сервер.
 
-> Important: WhitelistLab is a diagnostic tool. It does not bypass school/workplace/router restrictions, proxy policies, parental controls, or other access controls.
+> **Важно:** WhitelistLab — только диагностический инструмент. Он не обходит школьные, рабочие, роутерные и другие ограничения доступа, прокси-политики, родительский контроль или иные средства защиты.
 
-## Features
+## Возможности
 
-- iPhone-first responsive interface
-- URL reachability test
-- Request timing
-- Online/offline status
-- HTTP status visibility when the browser permits it
-- Human-readable diagnostic report
-- Copy report to clipboard
-- iOS share sheet support
-- Light/dark appearance
-- No account or telemetry in the project
-- GitHub Pages deployment
+- 📱 Интерфейс, удобный на iPhone
+- 🔗 Проверка доступности URL
+- ⏱️ Измерение времени ответа
+- 🌐 Проверка состояния интернет-соединения
+- 📡 Отображение HTTP-статуса, если браузер разрешает его получить
+- 📋 Понятный диагностический отчёт
+- 📎 Копирование отчёта
+- 📤 Поделиться отчётом через меню iPhone
+- 🌙 Светлая и тёмная тема
+- 🔒 Без аккаунта и встроенной телеметрии
+- 🚀 Публикация через GitHub Pages
 
-## iPhone
+## Использование на iPhone
 
-Open the deployed GitHub Pages site in Safari.
+Откройте опубликованную версию WhitelistLab в Safari.
 
-To install it like an app:
+Чтобы добавить сайт как приложение:
 
-1. Open the site in Safari.
-2. Tap Share.
-3. Choose Add to Home Screen.
-4. Launch WhitelistLab from the Home Screen.
+1. Откройте сайт в Safari.
+2. Нажмите кнопку «Поделиться».
+3. Выберите «На экран „Домой“».
+4. Запустите WhitelistLab с домашнего экрана.
 
-## Browser limitations
+## Ограничения браузера
 
-A normal web page cannot perform arbitrary low-level network operations. Browsers restrict cross-origin requests, raw TCP/UDP sockets, DNS inspection, and certificate inspection.
+Обычная веб-страница не может выполнять произвольные низкоуровневые сетевые операции. Браузеры ограничивают междоменные запросы, прямой доступ к TCP/UDP-сокетам, DNS-диагностику и проверку сертификатов.
 
-Therefore a failed browser request does not automatically mean that a domain is blocked. The report explains common causes and what to test next.
+Поэтому ошибка браузерного запроса **сама по себе не доказывает**, что сайт заблокирован. Отчёт показывает возможные причины и подсказывает, что проверить дальше.
 
-## Local development
+## Локальный запуск
 
-This is a static site. For example:
+Проект является статическим сайтом. Например, если установлен Python:
 
 ```bash
 python -m http.server 8080
 ```
 
-Then open http://localhost:8080.
+После этого откройте в браузере:
+
+```
+http://localhost:8080
+```
 
 ## GitHub Pages
 
-The repository includes a GitHub Actions workflow that publishes the static site to GitHub Pages.
+В репозитории есть GitHub Actions workflow для публикации статического сайта через GitHub Pages.
 
-## License
+## Лицензия
 
-MIT. See LICENSE.
+MIT. См. файл LICENSE.
