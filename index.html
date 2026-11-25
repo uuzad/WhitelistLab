@@ -1,61 +1,61 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#111827">
-  <meta name="description" content="WhitelistLab network diagnostics for iPhone and desktop browsers">
+  <meta name="description" content="Диагностика сетевого доступа для iPhone и компьютера">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
-  <title>WhitelistLab</title>
+  <title>WhitelistLab — диагностика сети</title>
 </head>
 <body>
   <main class="app">
     <section class="hero">
       <div class="brand">
         <div class="logo">W</div>
-        <div><h1>WhitelistLab</h1><p>Network diagnostics</p></div>
+        <div><h1>WhitelistLab</h1><p>Диагностика сетевого доступа</p></div>
       </div>
-      <span id="onlineBadge" class="badge">Checking…</span>
+      <span id="onlineBadge" class="badge">Проверка…</span>
     </section>
 
     <section class="card">
-      <label for="url">Website or URL</label>
+      <label for="url">Сайт или URL</label>
       <div class="input-row">
         <input id="url" type="url" inputmode="url" autocomplete="url"
           placeholder="https://example.com" value="https://example.com">
-        <button id="testBtn" type="button">Test</button>
+        <button id="testBtn" type="button">Проверить</button>
       </div>
-      <p class="hint">Use a website you own or are authorized to test.</p>
+      <p class="hint">Проверяйте только сайты, которые вам разрешено тестировать.</p>
     </section>
 
     <section id="resultCard" class="card hidden">
       <div class="result-header">
-        <div><span id="resultIcon" class="result-icon">●</span><span id="resultTitle">Result</span></div>
+        <div><span id="resultIcon" class="result-icon">●</span><span id="resultTitle">Результат</span></div>
         <span id="duration" class="duration">—</span>
       </div>
       <div class="grid">
         <div class="metric"><span>HTTP</span><strong id="httpStatus">—</strong></div>
-        <div class="metric"><span>Type</span><strong id="responseType">—</strong></div>
-        <div class="metric"><span>Online</span><strong id="onlineState">—</strong></div>
-        <div class="metric"><span>Time</span><strong id="timeValue">—</strong></div>
+        <div class="metric"><span>Тип ответа</span><strong id="responseType">—</strong></div>
+        <div class="metric"><span>Интернет</span><strong id="onlineState">—</strong></div>
+        <div class="metric"><span>Время</span><strong id="timeValue">—</strong></div>
       </div>
       <div class="message" id="resultMessage"></div>
     </section>
 
     <section class="card">
-      <h2>What the result means</h2>
+      <h2>Что означает результат</h2>
       <div id="explanation" class="explanation">
-        Enter a URL and start a test. Browser security restrictions may prevent cross-origin details from being visible.
+        Введите URL и запустите проверку. Ограничения безопасности браузера могут не позволить получить подробности междоменных запросов.
       </div>
     </section>
 
     <section class="actions">
-      <button id="copyBtn" class="secondary" type="button">Copy report</button>
-      <button id="shareBtn" class="secondary" type="button">Share report</button>
+      <button id="copyBtn" class="secondary" type="button">Скопировать отчёт</button>
+      <button id="shareBtn" class="secondary" type="button">Поделиться отчётом</button>
     </section>
 
-    <footer><p>WhitelistLab • diagnostic only • no bypass functionality</p></footer>
+    <footer><p>WhitelistLab • только диагностика • обход ограничений отсутствует</p></footer>
   </main>
   <script src="app.js"></script>
 </body>
